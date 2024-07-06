@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tenali+Ramakrishna&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: black;
+    color:white;
+    height:50px;
+    font-size: 30px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: flex;
+     align-items: center;
+}
+nav ul li{
+    text-shadow:1px  1px rgb(243, 180, 180);
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'roboto',sans-serif;
+    position: relative;
+}
+.box{
+    border:1px black solid;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box:hover{
+    background-color: rgb(223, 220, 223);
+}
+.info{
+    font-size: 30px;
+    font-family: "Tenali Ramakrishna", sans-serif;
+}
+.gameInfo{
+    padding: 0 25px;
+    font-family: "Tenali Ramakrishna", sans-serif;
+}
+.gameInfo h1{
+    font-size: 4rem;
+    text-shadow:2px  2px rgb(243, 180, 180);
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+/*----------------------------Utility Classes---------------------*/
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 0 23px;
+    padding:1px 18px;
+    background-color: rgb(192, 190, 190);
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgb(240, 76, 76);
+    font-weight: bold;
+    border: none;
+    font-family: "Tenali Ramakrishna", sans-serif;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 3px rgb(247, 173, 173);
+}
+#reset:hover{
+    border: rosybrown 1px solid;
+}
+.line{
+    background-color: rgb(245, 156, 156);
+    width: 0vw;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+@media screen and (max-width:800px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .info{
+        font-size: 15px;
+        font-family: "Tenali Ramakrishna", sans-serif;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,15vw);
+        grid-template-rows: repeat(3,15vw);
+    }
+}
